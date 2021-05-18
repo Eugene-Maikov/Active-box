@@ -1,0 +1,564 @@
+body {
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #2c2f33;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: #fff;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0 0 10px;
+}
+ul[class] {
+  list-style: none;
+}
+
+/* Container ========================= Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header ========================= Header */
+header {
+  width: 100%;
+  height: 100px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  align-items: center;
+
+  border-bottom: 1px solid #4e5167;
+}
+nav {
+  display: flex;
+  font-size: 13px;
+  font-weight: 700px;
+  text-transform: uppercase;
+}
+.nav__link {
+  margin-left: 50px;
+
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.75;
+
+  transition: opacity 0.1s linear;
+}
+.nav__link:first-child {
+  margin-left: 0;
+}
+.nav__link:hover {
+  opacity: 1;
+}
+
+/* Intro ========================= Intro */
+.intro {
+  height: 750px;
+  padding-top: 100px;
+
+  background: #30344e url("images/intro-bg.jpg") center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro__inner {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+.intro__title {
+  margin: 0 0 30px;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  line-height: 1.1;
+  color: #fff;
+}
+.intro__suptitle {
+  margin-bottom: 60px;
+
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Button ========================= Button */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 14px 40px;
+
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  transition: background 0.1s linear;
+}
+
+.btn--red {
+  background-color: #e84545;
+}
+.btn--red:hover {
+  background-color: #cc3e3e;
+}
+.btn__long {
+  min-width: 280px;
+}
+
+/* Features ========================= Features */
+.features {
+  display: flex; /* Чтобы ... кароче так надо */
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+.features__item {
+  width: 33.3333%; /* 33% из 100% занимает кажный блок */
+  padding: 0 40px;
+  margin: 25px 0;
+
+  text-align: center; /* Все в блоке по центру */
+}
+.features__icon {
+  margin-bottom: 25px;
+}
+.features__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  color: #2d3033;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.features__text {
+  font-size: 14px;
+  line-height: 1.5;
+  columns: #6c7279;
+}
+
+/* Works ========================= Works */
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+.works__item {
+  width: 25%;
+  height: 350px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.works__item:hover .works__content {
+  opacity: 1;
+}
+
+.works_photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  transform: translate3d(-50%, -50%, 0);
+}
+.works__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(232, 69, 69, 0.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  transition: opacity 0.2s linear;
+}
+.works__title {
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+.works__text {
+  font-size: 14px;
+  color: white;
+}
+
+/* Team ========================= Team */
+.team {
+  margin: 100px 0 70px;
+}
+.team__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.team__item {
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+.team__photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  margin-bottom: 20px;
+}
+.team__name {
+  margin-bottom: 8px;
+
+  font-size: 22px;
+  color: #2d3033;
+}
+.team__prof {
+  margin-bottom: 15px;
+
+  font-size: 13;
+  color: #e84545;
+  text-transform: uppercase;
+}
+.team__text {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  color: #6c7279;
+  line-height: 1.5;
+}
+
+/* Social ========================= Social */
+.social {
+  display: flex;
+}
+.social--foter {
+  justify-content: center;
+}
+.social__item {
+  display: flex;
+  justify-content: center; /* Выровнено с помощью FLEX по горизонтали. */
+  align-items: center; /* Выровнено с помощью FLEX по вертикали. */
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+
+  background-color: #fff;
+  border: 1px solid #e8ecee;
+
+  transition: background 0.1s linear; /* Плавный переход фона*/
+}
+
+.social__item:hover {
+  background-color: #e8ecee;
+}
+.social__item:hover .social__icon {
+  fill: #000;
+}
+
+.social--foter .social__item {
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #fff;
+  border-radius: 2px;
+}
+
+.social--foter .social__item:hover {
+  background-color: #fff;
+}
+
+.social--foter .social__icon {
+  fill: #fff;
+}
+
+.social__icon {
+  display: block;
+  height: 18px;
+
+  fill: #c6cacc;
+
+  transition: fill 0.1s linear;
+}
+
+/* Reviews ========================= Reviews */
+.reviews {
+  overflow: hidden;
+  background-color: #53354a;
+}
+.review__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.review__photo {
+  width: 50%;
+  height: 500px;
+  position: relative;
+}
+.reviews__img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+
+  transform: translateY(-50%);
+}
+.review__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 80px;
+}
+.review__text {
+  margin-bottom: 25px;
+
+  font-family: "Cardo", sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  line-height: 1.2;
+  color: #fff;
+}
+.review__author {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Download ========================= Download */
+.download {
+  margin: 90px 0;
+  text-align: center;
+}
+.download__title {
+  margin-bottom: 5px;
+
+  font-size: 28px;
+  color: #2d3033;
+  font-weight: 300;
+}
+.download__text {
+  margin-bottom: 30px;
+
+  font-size: 13px;
+  color: #2d3033;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Footer ========================= Footer */
+.footer {
+  background-color: #3a3e64;
+}
+.footer__inner {
+  padding: 70px 0;
+
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__block {
+  width: 33.33333%;
+  padding: 0 15px;
+
+  text-align: center;
+}
+.footer__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer__address {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Copyring ========================= Copyring */
+.copyring {
+  padding: 20px 0;
+
+  background-color: #313454;
+}
+.copyring__text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #808080;
+}
+.copyring__text span {
+  color: #fff;
+}
+
+/* Обновления 1.2 */
+.menu__burger {
+  display: none;
+}
+.window__menu {
+  display: none;
+  background-color: #fff;
+  width: 180px;
+  padding-bottom: 30px;
+  padding-top: 111px;
+  position: absolute;
+  top: 0px;
+  right: 14px;
+}
+.close__menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  width: 35px;
+}
+.window__menu-link {
+  color: #131416;
+  text-decoration: none;
+}
+.window__menu-list {
+  margin-bottom: 30px;
+}
+.active{
+  display: block;
+}
+
+/* ================== Адаптив =================================================================== */
+/* ============================================================================================== */
+/* ============================================================================================== */
+@media (max-width: 920px) {
+  .nav {
+    display: none;
+  }
+  .menu__burger {
+    display: block;
+  }
+  .intro__title {
+    font-size: 42px;
+  }
+  .intro__suptitle {
+    font-size: 18px;
+  }
+  .features__item {
+    width: 50%;
+    padding: 0 20px;
+  }
+  .works__item {
+    width: 50%;
+  }
+  .team__item {
+    width: 50%;
+  }
+  .team__photo {
+    width: 100%;
+  }
+  .review__item {
+    display: block;
+  }
+  .review__photo {
+    width: 100%;
+    height: 432px;
+    position: static;
+  }
+  .reviews__img {
+    width: 112%;
+    position: static;
+    transform: none;
+    margin-left: -15px;
+  }
+  .review__content {
+    width: 100%;
+    padding: 70px 0;
+  }
+}
+@media (max-width: 520px) {
+  .intro__title {
+    font-size: 27px;
+  }
+  .intro__suptitle {
+    font-size: 16px;
+  }
+  .features__item {
+    width: 100%;
+  }
+  .works__item {
+    height: 250px;
+  }
+  .team__item {
+    width: 100%;
+  }
+  .review__content {
+    margin-top: -200px;
+  }
+  .review__text {
+    font-size: 24px;
+  }
+  .footer__inner {
+    padding-bottom: 0;
+    padding-top: 40px;
+  }
+  .footer__block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
